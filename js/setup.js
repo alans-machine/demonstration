@@ -23,7 +23,7 @@
     var tape = document.querySelector('.tape');
     var tapeWidth = tape.offsetWidth;
     var cells = tape.querySelectorAll('.cell');
-    var cellSize = tapeWidth/cells.length - 2;
+    var cellSize = (tapeWidth-1)/cells.length - 2;
     for (var index = 0; index < cells.length; index++){
         var cell = cells[index];
         cell.style.width = "" + cellSize + "px";
