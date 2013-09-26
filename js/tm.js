@@ -1,4 +1,4 @@
-/*! tm - v0.0.0 - 2013-09-21
+/*! tm - v0.0.0 - 2013-09-26
 * Copyright (c) 2013 Daan van Berkel; Licensed  */
 window.util = (function(){
     function merge(target){
@@ -188,7 +188,7 @@ window.tm = (function(){
     }
     StepView.prototype.update = function(){
         var button = document.createElement('button');
-        button.innerText = 'step';
+        button.innerHTML = 'step';
         button.addEventListener('click', this.step.bind(this));
         this.parentContainer.appendChild(button);
     };
@@ -212,14 +212,14 @@ window.tm = (function(){
     };
     AutoPlayView.prototype.pauzeButton = function(){
         var pauze= document.createElement('button');
-        pauze.innerText = '||';
+        pauze.innerHTML = '||';
         pauze.addEventListener('click', this.pauze.bind(this));
         return pauze;
 
     };
     AutoPlayView.prototype.playButton = function(){
         var play = document.createElement('button');
-        play.innerText = '>';
+        play.innerHTML = '&gt;';
         play.addEventListener('click', this.play.bind(this));
         return play;
     };
